@@ -1,40 +1,40 @@
-# Booking.com Reviews ? NLP Multil?ngue (Estudo de Caso)
+# Booking.com Reviews — NLP Multilíngue (Estudo de Caso)
 
-Este projeto analisa avalia??es do Booking.com para entender **como h?spedes em diferentes idiomas (EN/DE/FR)**
-expressam o que valorizam e o que criticam. O foco ? transformar texto livre em **insights acion?veis** para
-opera??o, produto e marketing.
+Este projeto analisa avaliações do Booking.com para entender **como hóspedes em diferentes idiomas (EN/DE/FR)**
+expressam o que valorizam e o que criticam. O foco é transformar texto livre em **insights acionáveis** para
+operação, produto e marketing.
 
-## Contexto de neg?cio
-Hot?is recebem avalia??es em m?ltiplos idiomas. A forma de express?o pode variar e gerar vieses na interpreta??o.
-Ao analisar separadamente **reviews positivas e negativas por idioma**, conseguimos identificar padr?es culturais
-ou expectativas espec?ficas que impactam decis?es de servi?o e comunica??o.
+## Contexto de negócio
+Hotéis recebem avaliações em múltiplos idiomas. A forma de expressão pode variar e gerar vieses na interpretação.
+Ao analisar separadamente **reviews positivas e negativas por idioma**, conseguimos identificar padrões culturais
+ou expectativas específicas que impactam decisões de serviço e comunicação.
 
 ## Perguntas respondidas
-- Quais temas aparecem com mais frequ?ncia em reviews **positivas** e **negativas** por idioma?
-- Existem diferen?as de ?nfase entre ingl?s, alem?o e franc?s?
-- Onde est?o os principais drivers de satisfa??o/insatisfa??o?
+- Quais temas aparecem com mais frequência em reviews **positivas** e **negativas** por idioma?
+- Existem diferenças de ênfase entre inglês, alemão e francês?
+- Onde estão os principais drivers de satisfação/insatisfação?
 
 ## Dados
 - Fonte: dataset de reviews coletadas para fins educacionais.
 - Campos principais: `reviewTextParts/Liked`, `reviewTextParts/Disliked`, `reviewOriginalLanguage`.
-- Observa??o: `reviewOriginalLanguage` possui valores faltantes. O pipeline aplica **fallback** de detec??o por stopwords.
+- Observação: `reviewOriginalLanguage` possui valores faltantes. O pipeline aplica **fallback** de detecção por stopwords.
 
 ## Metodologia (resumo)
-1. Normaliza??o de texto preservando acentos.
-2. Detec??o de idioma (campo original + fallback por stopwords).
-3. Lemmatiza??o com spaCy por idioma.
+1. Normalização de texto preservando acentos.
+2. Detecção de idioma (campo original + fallback por stopwords).
+3. Lemmatização com spaCy por idioma.
 4. Filtro de POS (ADJ/NOUN/PROPN) e stopwords.
-5. Extra??o de **trigramas** e frequ?ncia por idioma e sentimento.
+5. Extração de **trigramas** e frequência por idioma e sentimento.
 
-## Entreg?veis
+## Entregáveis
 - `outputs/<cidade>/top_trigrams_summary.csv`: ranking de trigramas por idioma e sentimento.
 - `outputs/<cidade>/summary_counts.csv`: volume de reviews por idioma/sentimento.
 - `outputs/<cidade>/good/`: trigramas de reviews positivas por idioma.
 - `outputs/<cidade>/bad/`: trigramas de reviews negativas por idioma.
-- `reports/insights_<cidade>.md`: relat?rio de insights (gerado por script).
+- `reports/insights_<cidade>.md`: relatório de insights (gerado por script).
 
 ## Como executar
-1. Instale depend?ncias:
+1. Instale dependências:
    - `pip install -r requirements.txt`
 2. Baixe os modelos do spaCy:
    - `python -m spacy download en_core_web_sm`
@@ -42,18 +42,18 @@ ou expectativas espec?ficas que impactam decis?es de servi?o e comunica??o.
    - `python -m spacy download fr_core_news_sm`
 3. Execute o pipeline:
    - `python src/pipeline.py --config config/config.json`
-4. Gere o relat?rio:
+4. Gere o relatório:
    - `python src/report.py --config config/config.json`
 
-## Execu??o por cidade
-Para manter outputs separados por cidade, use os arquivos de configura??o dedicados:
+## Execução por cidade
+Para manter outputs separados por cidade, use os arquivos de configuração dedicados:
 - Berlim: `python src/pipeline.py --config config/config_berlin.json`
-  - Relat?rio: `python src/report.py --config config/config_berlin.json`
+  - Relatório: `python src/report.py --config config/config_berlin.json`
 - Creta: `python src/pipeline.py --config config/config_crete.json`
-  - Relat?rio: `python src/report.py --config config/config_crete.json`
+  - Relatório: `python src/report.py --config config/config_crete.json`
 
 ## Estrutura do projeto
-Estrutura atual do reposit?rio:
+Estrutura atual do repositório:
 
 ```
 hotel_reviews_nlp_analysis
@@ -100,15 +100,15 @@ hotel_reviews_nlp_analysis
 
 Principais pastas:
 - `data/raw/`: dados brutos (Berlim e Creta).
-- `config/`: arquivos de configura??o por cidade.
-- `src/`: pipeline NLP e gera??o de relat?rio.
+- `config/`: arquivos de configuração por cidade.
+- `src/`: pipeline NLP e geração de relatório.
 - `outputs/`: resultados organizados por cidade e sentimento.
-- `reports/`: relat?rios executivos gerados.
+- `reports/`: relatórios executivos gerados.
 - `legacy/`: notebooks e outputs antigos.
 
 Arquivos principais:
 - `main.ipynb`: estudo de caso com narrativa executiva e uso do pipeline.
-- `requirements.txt`: depend?ncias do projeto.
+- `requirements.txt`: dependências do projeto.
 
-## Nota de ?tica e conformidade
-Este projeto ? educacional. Sempre respeite as pol?ticas de uso e termos de servi?o das fontes ao coletar dados.
+## Nota de ética e conformidade
+Este projeto é educacional. Sempre respeite as políticas de uso e termos de serviço das fontes ao coletar dados.
