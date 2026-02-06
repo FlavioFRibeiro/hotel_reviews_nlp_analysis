@@ -1,4 +1,4 @@
-# Booking.com Reviews — NLP Multilíngue (Estudo de Caso)
+﻿# Booking.com Reviews — NLP Multilíngue (Estudo de Caso)
 
 Este projeto analisa avaliações do Booking.com para entender **como hóspedes em diferentes idiomas (EN/DE/FR)**
 expressam o que valorizam e o que criticam. O foco é transformar texto livre em **insights acionáveis** para
@@ -51,6 +51,14 @@ Para manter outputs separados por cidade, use os arquivos de configuração dedi
   - Relatório: `python src/report.py --config config/config_berlin.json`
 - Creta: `python src/pipeline.py --config config/config_crete.json`
   - Relatório: `python src/report.py --config config/config_crete.json`
+
+## Diferença entre configs e reports
+- `config/config.json`: configuração **geral**, usa o dataset base e gera o relatório global por idioma.
+- `config/config_berlin.json` e `config/config_crete.json`: configurações **por cidade**, apontam para datasets específicos e salvam outputs/relatórios em pastas dedicadas.
+
+Relatórios:
+- `reports/insights_by_language.md`: relatório **global** (consolidado por idioma).
+- `reports/insights_berlin.md` e `reports/insights_crete.md`: relatórios **por cidade**.
 
 ## Estrutura do projeto
 Estrutura atual do repositório:
@@ -112,11 +120,3 @@ Arquivos principais:
 
 ## Nota de ética e conformidade
 Este projeto é educacional. Sempre respeite as políticas de uso e termos de serviço das fontes ao coletar dados.
-
-## Diferen?a entre configs e reports
-- `config/config.json`: configura??o **geral**, usa o dataset base e gera o relat?rio global por idioma.
-- `config/config_berlin.json` e `config/config_crete.json`: configura??es **por cidade**, apontam para datasets espec?ficos e salvam outputs/relat?rios em pastas dedicadas.
-
-Relat?rios:
-- `reports/insights_by_language.md`: relat?rio **global** (consolidado por idioma).
-- `reports/insights_berlin.md` e `reports/insights_crete.md`: relat?rios **por cidade**.
