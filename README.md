@@ -112,3 +112,11 @@ Arquivos principais:
 
 ## Nota de ética e conformidade
 Este projeto é educacional. Sempre respeite as políticas de uso e termos de serviço das fontes ao coletar dados.
+
+## Diferen?a entre configs e reports
+- `config/config.json`: configura??o **geral**, usa o dataset base e gera o relat?rio global por idioma.
+- `config/config_berlin.json` e `config/config_crete.json`: configura??es **por cidade**, apontam para datasets espec?ficos e salvam outputs/relat?rios em pastas dedicadas.
+
+Relat?rios:
+- `reports/insights_by_language.md`: relat?rio **global** (consolidado por idioma).
+- `reports/insights_berlin.md` e `reports/insights_crete.md`: relat?rios **por cidade**.
