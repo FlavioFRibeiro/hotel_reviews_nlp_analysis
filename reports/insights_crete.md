@@ -1,7 +1,10 @@
-# Insights por idioma - Booking Reviews
+﻿# Insights por idioma - Booking Reviews
 
-Relatório gerado a partir do pipeline NLP. Use este documento para interpretar os temas mais frequentes
-em reviews positivas e negativas por idioma.
+## Resumo executivo
+- **Inglês:** destaque para vista do mar, quarto e equipe; críticas sobre piscina, entretenimento e ar-condicionado.
+- **Alemão:** ênfase em comida/equipe e piscina; reclamações sobre quarto/piscina privativa e barulho de shows.
+- **Francês:** foco em custo-benefício, buffet e piscina; críticas a banheiro pequeno e bebidas do all inclusive.
+
 
 ## English (en)
 - Reviews analisadas: **364 boas** | **295 ruins**

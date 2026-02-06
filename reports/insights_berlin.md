@@ -1,7 +1,10 @@
-# Insights por idioma - Booking Reviews
+﻿# Insights por idioma - Booking Reviews
 
-Relatório gerado a partir do pipeline NLP. Use este documento para interpretar os temas mais frequentes
-em reviews positivas e negativas por idioma.
+## Resumo executivo
+- **Inglês:** valoriza atendimento, limpeza e custo-benefício; queixas sobre café/chaleira, frigobar e estacionamento.
+- **Alemão:** forte ênfase em localização (Potsdamer Platz) e café da manhã; críticas sobre estacionamento e ruído/rua.
+- **Francês:** destaque para custo-benefício e café da manhã, além da localização; críticas a quarto pequeno e minibar/água.
+
 
 ## English (en)
 - Reviews analisadas: **559 boas** | **358 ruins**
