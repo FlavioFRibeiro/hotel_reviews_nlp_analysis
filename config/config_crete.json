@@ -1,0 +1,40 @@
+{
+  "input_path": "data/raw/dataset_booking-review.csv",
+  "good_column": "reviewTextParts/Liked",
+  "bad_column": "reviewTextParts/Disliked",
+  "language_column": "reviewOriginalLanguage",
+  "target_languages": [
+    "en",
+    "de",
+    "fr"
+  ],
+  "language_labels": {
+    "en": "English",
+    "de": "German",
+    "fr": "French"
+  },
+  "spacy_models": {
+    "en": "en_core_web_sm",
+    "de": "de_core_news_sm",
+    "fr": "fr_core_news_sm"
+  },
+  "allowed_pos": [
+    "ADJ",
+    "NOUN",
+    "PROPN"
+  ],
+  "ngram_size": 3,
+  "top_n": 20,
+  "min_text_length": 15,
+  "min_token_length": 2,
+  "drop_duplicates": true,
+  "language_fallback": {
+    "enabled": true,
+    "min_stopword_hits": 2
+  },
+  "filters": {
+    "hotel_ids": []
+  },
+  "output_dir": "outputs/crete",
+  "report_path": "reports/insights_crete.md"
+}

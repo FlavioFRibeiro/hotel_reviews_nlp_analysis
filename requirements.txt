@@ -1,0 +1,4 @@
+pandas>=1.5
+spacy==3.7.2
+matplotlib>=3.7
+langdetect>=1.0.9

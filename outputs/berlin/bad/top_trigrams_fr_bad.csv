@@ -1,0 +1,21 @@
+language,sentiment,ngram,freq
+fr,bad,bouteille eau chambre,2
+fr,bad,habitación poco pequeña,2
+fr,bad,no oferta bar,1
+fr,bad,oferta bar restaurante,1
+fr,bad,bar restaurante habitacione,1
+fr,bad,ajout petit minibar,1
+fr,bad,petit minibar chambre,1
+fr,bad,minibar chambre cas,1
+fr,bad,chambre cas élément,1
+fr,bad,cas élément frais,1
+fr,bad,élément frais aliment,1
+fr,bad,frais aliment animal,1
+fr,bad,aliment animal compagnie,1
+fr,bad,animal compagnie médicament,1
+fr,bad,byłoby świetnie gdyby,1
+fr,bad,świetnie gdyby plac,1
+fr,bad,gdyby plac obok,1
+fr,bad,plac obok było,1
+fr,bad,obok było parking,1
+fr,bad,było parking jednak,1

@@ -1,0 +1,21 @@
+language,sentiment,ngram,freq
+en,good,friendly helpful staff,10
+en,good,staff friendly helpful,10
+en,good,good value money,8
+en,good,location friendly staff,7
+en,good,nice clean room,7
+en,good,room friendly staff,7
+en,good,clean staff friendly,6
+en,good,staff helpful friendly,6
+en,good,friendly staff good,6
+en,good,hotel good location,5
+en,good,location close metro,4
+en,good,good location nice,4
+en,good,good breakfast good,4
+en,good,great location nice,4
+en,good,room clean spacious,4
+en,good,location clean room,4
+en,good,staff good breakfast,4
+en,good,hotel friendly staff,4
+en,good,staff kind helpful,4
+en,good,breakfast good location,4
