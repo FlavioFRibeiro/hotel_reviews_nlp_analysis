@@ -71,7 +71,7 @@ def main() -> None:
     report_text = generate_report(config)
     report_path = Path(config["report_path"])
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(report_text, encoding="utf-8")
+    report_path.write_text(report_text, encoding="utf-8-sig")
     print(f"Report written to {report_path}")
 
 
